@@ -20,7 +20,11 @@ public class Inventory implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "inventory_id")
 	private int id;
-	
+
+
+	@Column(name="qty")
+	private int qty;
+
 	@ManyToOne
 	@JoinColumn(name = "retailer_id")
 	private Retailer retailer;
@@ -52,7 +56,15 @@ public class Inventory implements Serializable {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
+
+	public int getQty() {
+		return qty;
+	}
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
 	public Inventory() {
 	
 	}

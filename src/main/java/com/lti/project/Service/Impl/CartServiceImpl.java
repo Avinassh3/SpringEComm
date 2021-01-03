@@ -8,7 +8,9 @@ import com.lti.project.repository.ProductRepository;
 import com.lti.project.repository.UserRepository;
 import com.lti.project.Service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CartServiceImpl implements CartService {
 
     @Autowired
